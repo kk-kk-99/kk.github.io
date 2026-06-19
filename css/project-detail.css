@@ -1,0 +1,316 @@
+/* ========== 项目详情页面样式 ========== */
+
+.project-detail-section {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+}
+
+.project-detail-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.project-detail-header .project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.project-detail-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-detail-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.project-detail-card {
+    padding: 40px;
+    margin-bottom: 32px;
+}
+
+.project-detail-card .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.result-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+/* ========== 项目图片展示 ========== */
+.project-gallery {
+    margin-top: 20px;
+}
+
+.gallery-group {
+    margin-bottom: 48px;
+}
+
+.gallery-group:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-group-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* 局部放大图叠加效果 */
+.image-with-zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-with-zoom .gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform var(--transition-normal);
+}
+
+.image-with-zoom:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* 单列布局（用于系统模型图） */
+.gallery-grid-single {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-grid-single .gallery-item .gallery-image {
+    height: auto;
+    max-height: 400px;
+}
+
+/* 视频容器样式 */
+.video-container {
+    position: relative;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* 自定义大号播放按钮覆盖层 */
+.video-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+    border-radius: 12px;
+}
+
+.video-container:hover .video-play-overlay {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.video-play-overlay.hidden {
+    display: none;
+}
+
+.play-button-large {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #00fff5, #00b4d8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 25px rgba(0, 255, 245, 0.5);
+}
+
+.video-play-overlay:hover .play-button-large {
+    transform: scale(1.15);
+    box-shadow: 0 8px 35px rgba(0, 255, 245, 0.7);
+}
+
+.play-button-large svg {
+    width: 40px;
+    height: 40px;
+    fill: #0a0e17;
+    margin-left: 6px;
+}
+
+/* 视频控制栏样式优化 */
+.video-container video::-webkit-media-controls-panel {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.zoom-image {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 45%;
+    max-width: 200px;
+    height: auto;
+    border: 3px solid var(--accent-cyan);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.zoom-image:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(34, 211, 238, 0.5);
+    z-index: 10;
+}
+
+/* 鼠标悬停时放大局部图 */
+.image-with-zoom:hover .zoom-image {
+    transform: scale(1.1);
+}
+
+.gallery-caption {
+    padding: 16px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: center;
+    background: var(--bg-primary);
+}
+
+/* ========== 导航栏返回按钮 ========== */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ========== 项目链接按钮 ========== */
+.project-link {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+}
+
+/* ========== 响应式设计 ========== */
+@media (max-width: 768px) {
+    .project-detail-section {
+        padding: 100px 0 60px;
+    }
+
+    .project-detail-title {
+        font-size: 2rem;
+    }
+
+    .project-detail-subtitle {
+        font-size: 1rem;
+    }
+
+    .project-detail-card {
+        padding: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        height: 200px;
+    }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永磁同步直线电机重复控制研究 - 项目详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">梁永康</span>
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- 项目标题 -->
+            <div class="project-detail-header">
+                <div class="project-meta">
+                    <span class="project-role">毕业设计</span>
+                    <span class="project-date">2026.01 - 2026.03</span>
+                </div>
+                <h1 class="project-detail-title">永磁同步直线电机重复控制研究</h1>
+                <p class="project-detail-subtitle">基于内模原理的重复控制算法研究，实现周期性推力波动抑制</p>
+            </div>
+
+            <!-- 项目介绍 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目介绍</h2>
+                <p class="project-description">
+                    本项目为毕业设计研究课题，主要针对永磁同步直线电机（PMLSM）运行过程中存在的周期性推力波动问题进行研究。
+                    建立了包含端部效应、非线性摩擦等周期性扰动源的机电耦合模型，设计了伪微分前馈速度环与PD位置环相结合的基础控制器，
+                    在此基础上引入基于内模原理的重复控制算法，并通过相位超前补偿进一步优化系统性能。
+                </p>
+            </div>
+
+            <!-- 项目职责 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">研究内容</h2>
+                <ul class="project-list">
+                    <li>基于 d-q 轴坐标变换建立 <span class="highlight">PMLSM 机电耦合模型</span>，纳入端部效应、非线性摩擦等周期性推力波动源</li>
+                    <li>设计 <span class="highlight">伪微分前馈速度环</span> 与 <span class="highlight">PD 位置环</span> 组成的基础控制器</li>
+                    <li>基于 <span class="highlight">内模原理</span> 实现重复控制，并加入<span class="highlight">相位超前补偿</span>优化方案</li>
+                    <li>基于 <span class="highlight">Simulink</span> 搭建仿真系统，设计空载、变负载、变指令参数等多组对照实验</li>
+                </ul>
+            </div>
+
+            <!-- 核心技术 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">核心技术</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">d-q 轴坐标变换</span>
+                    <span class="tech-tag">PMLSM 建模</span>
+                    <span class="tech-tag">重复控制</span>
+                    <span class="tech-tag">内模原理</span>
+                    <span class="tech-tag">相位超前补偿</span>
+                    <span class="tech-tag">Simulink 仿真</span>
+                </div>
+            </div>
+
+            <!-- 项目成果展示 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">仿真实验结果</h2>
+                <p class="result-description">以下是永磁同步直线电机重复控制系统的仿真测试结果，包括系统建模、扰动分析、频率响应、幅度响应和负载误差对比：</p>
+                
+                <div class="project-gallery">
+                    <!-- 系统建模 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">系统建模</h3>
+                        <div class="gallery-grid gallery-grid-single">
+                            <div class="gallery-item">
+                                <img src="assets/project1/PMLSM_Plant.png" alt="永磁同步直线电机本体模型" class="gallery-image">
+                                <p class="gallery-caption">永磁同步直线电机（PMLSM）本体模型</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 扰动分析 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">扰动仿真</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="assets/project1/端部效应扰动.png" alt="端部效应扰动" class="gallery-image">
+                                <p class="gallery-caption">端部效应扰动</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project1/滑动摩擦力扰动.png" alt="滑动摩擦力扰动" class="gallery-image">
+                                <p class="gallery-caption">滑动摩擦力扰动</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 频率响应测试 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">频率响应测试</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="assets/project1/0.5hz.png" alt="0.5Hz频率测试" class="gallery-image">
+                                <p class="gallery-caption">0.5Hz 频率响应</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project1/2hz.png" alt="2Hz频率测试" class="gallery-image">
+                                <p class="gallery-caption">2Hz 频率响应</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project1/5hz.png" alt="5Hz频率测试" class="gallery-image">
+                                <p class="gallery-caption">5Hz 频率响应</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 幅度测试 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">幅度响应测试</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="assets/project1/A=0.02.png" alt="A=0.02幅度测试" class="gallery-image">
+                                <p class="gallery-caption">幅度 A=0.02</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project1/A=0.05.png" alt="A=0.05幅度测试" class="gallery-image">
+                                <p class="gallery-caption">幅度 A=0.05</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project1/A=0.1.png" alt="A=0.1幅度测试" class="gallery-image">
+                                <p class="gallery-caption">幅度 A=0.1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 负载误差对比 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">负载误差对比</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="assets/project1/空载误差对比.png" alt="空载误差对比" class="gallery-image">
+                                <p class="gallery-caption">空载误差对比</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="image-with-zoom">
+                                    <img src="assets/project1/50N_误差对比.png" alt="50N负载误差对比" class="gallery-image">
+                                    <img src="assets/project1/50N_误差对比_局部放大.png" alt="50N局部放大" class="zoom-image">
+                                </div>
+                                <p class="gallery-caption">50N 负载误差对比（含局部放大）</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="image-with-zoom">
+                                    <img src="assets/project1/100N_误差对比.png" alt="100N负载误差对比" class="gallery-image">
+                                    <img src="assets/project1/100N_误差对比_局部放大.png" alt="100N局部放大" class="zoom-image">
+                                </div>
+                                <p class="gallery-caption">100N 负载误差对比（含局部放大）</p>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="image-with-zoom">
+                                    <img src="assets/project1/300N_误差对比.png" alt="300N负载误差对比" class="gallery-image">
+                                    <img src="assets/project1/300N_误差对比_局部放大.png" alt="300N局部放大" class="zoom-image">
+                                </div>
+                                <p class="gallery-caption">300N 负载误差对比（含局部放大）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 返回按钮 -->
+            <div class="text-center mt-8">
+                <a href="index.html" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="图片预览">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>

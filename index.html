@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁永康 - 电机控制算法工程师</title>
+    <meta name="description" content="梁永康的个人作品集 - 电机控制算法工程师，专注于FOC矢量控制、嵌入式开发与电力电子">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-emoji">👋</span>
+                <span class="logo-text">Hi, I'm KK</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#education" class="nav-link">教育经历</a></li>
+                <li><a href="#internship" class="nav-link">实习经历</a></li>
+                <li><a href="#projects" class="nav-link">项目经历</a></li>
+                <li><a href="#honors" class="nav-link">荣誉奖励</a></li>
+                <li><a href="#skills" class="nav-link">专业技能</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="切换菜单">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-light"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">电机控制算法工程师</div>
+                <h1 class="hero-title animate-on-scroll">
+                    <span class="gradient-text">梁永康</span>
+                </h1>
+                
+                <div class="hero-tags animate-on-scroll">
+                    <span class="tag">FOC 矢量控制</span>
+                    <span class="tag">嵌入式开发</span>
+                    <span class="tag">FreeRTOS</span>
+                    <span class="tag">Simulink 仿真</span>
+                </div>
+                <div class="hero-links animate-on-scroll">
+                    <a href="https://github.com/kk-kk-99" target="_blank" rel="noopener noreferrer" class="hero-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://blog.csdn.net/2201_75619391?type=blog" target="_blank" rel="noopener noreferrer" class="hero-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.5 2A2.5 2.5 0 002 4.5v15A2.5 2.5 0 004.5 22h15a2.5 2.5 0 002.5-2.5v-15A2.5 2.5 0 0019.5 2h-15zM5 5h14v1H5V5zm0 3h10v1H5V8zm0 3h14v1H5v-1zm0 3h10v1H5v-1z"/></svg>
+                        CSDN 博客
+                    </a>
+                    <span class="hero-link tooltip" data-tooltip="15902015669@163.com">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        邮箱
+                    </span>
+                    <span class="hero-link tooltip" data-tooltip="15902015669">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        电话
+                    </span>
+                </div>
+
+                </div>
+            <div class="hero-avatar animate-on-scroll">
+                <img src="assets/avatar.jpg" alt="梁永康">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育经历 -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">教育经历</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-row">
+                                <h3 class="timeline-title">香港城市大学</h3>
+                                <span class="timeline-date">2026.09 - 2027.07</span>
+                            </div>
+                            <p class="timeline-subtitle">电气与电子工程 / 硕士 <span class="status-badge">已录取&待入学</span></p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><strong>核心深耕：</strong>聚焦电机控制算法与电力电子电控方向，熟悉 FOC 等主流落地算法，同步跟进前沿控制技术方向。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-row">
+                                <h3 class="timeline-title">深圳大学</h3>
+                                <span class="timeline-date">2022.09 - 2026.07</span>
+                            </div>
+                            <p class="timeline-subtitle">机械设计制造及其自动化 / 本科</p>
+                        </div>
+                        <div class="edu-stats">
+                            <div class="stat-item">
+                                <span class="stat-value highlight">80.4</span>
+                                <span class="stat-label">GPA / 100</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value highlight">21/117</span>
+                                <span class="stat-label">专业排名</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value highlight">481</span>
+                                <span class="stat-label">CET-6</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value highlight">6.0</span>
+                                <span class="stat-label">IELTS</span>
+                            </div>
+                        </div>
+                        <div class="courses">
+                            <p class="courses-label">主修课程</p>
+                            <div class="course-tags">
+                                <span class="course-tag">C 程序设计</span>
+                                <span class="course-tag">控制工程基础</span>
+                                <span class="course-tag">电路分析</span>
+                                <span class="course-tag">电子技术</span>
+                                <span class="course-tag">机电传动与控制</span>
+                                <span class="course-tag">电气控制与 PLC</span>
+                                <span class="course-tag">单片机接口技术</span>
+                                <span class="course-tag">机械设计</span>
+                                <span class="course-tag">机械原理</span>
+                                <span class="course-tag">材料力学</span>
+                                <span class="course-tag">流体力学与液压传动</span>
+                                <span class="course-tag">工程热流体</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实习经历 -->
+    <section class="section section-alt" id="internship">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Internship</span>
+                <h2 class="section-title">实习经历</h2>
+            </div>
+            <div class="card animate-on-scroll">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h3 class="card-title">嵌入式工程师</h3>
+                        <span class="card-date">2025.11 - 2026.03</span>
+                    </div>
+                    <p class="card-subtitle">阿圆科技（深圳）有限公司</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <h4 class="card-section-title">
+                            <span class="card-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            工作内容
+                        </h4>
+                        <ul class="card-list">
+                            <li>基于 <span class="highlight">STM32F405</span> 完成原理图、PCB 设计与整机调试</li>
+                            <li>采用 <span class="highlight">FreeRTOS</span> 搭建多任务框架，划分雷达感知、<span class="highlight">UWB 解析</span>、底盘运动控制任务，通过队列、信号量同步多传感器数据</li>
+                            <li>开发整车运动控制逻辑</li>
+                        </ul>
+                    </div>
+                    <div class="card-section">
+                        <h4 class="card-section-title">
+                            <span class="card-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                            </span>
+                            工作成果
+                        </h4>
+                        <ul class="card-list">
+                            <li>硬件接口集成化，提升调试效率</li>
+                            <li>实现 <span class="highlight">5m 内 120 度视角人体识别并持续跟踪，成功率高达 99%</span></li>
+                            <li>依托 <span class="highlight">RTOS 实时调度</span>完成稳定跟随与动态避障</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经历 -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">项目经历</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- 项目 1 -->
+                <div class="project-card card animate-on-scroll animated">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">毕业设计</span>
+                            <span class="project-date">2026.01 - 2026.03</span>
+                        </div>
+                        <h3 class="project-title">永磁同步直线电机重复控制研究</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">内容亮点</h4>
+                            <ul class="project-list">
+                                <li>基于 d-q 轴坐标变换建立 PMLSM 机电耦合模型，纳入端部效应、非线性摩擦等周期性推力波动源，设计伪微分前馈速度环+PD 位置环基础控制</li>
+                                <li>基于内模原理实现重复控制，并加入相位超前补偿优化方案</li>
+                                <li>基于 Simulink 搭建仿真系统，设计空载、变负载、变指令参数等多组对照实验，定量分析算法性能</li>
+                            </ul>
+                        </div>
+                        <div class="project-result">
+                            <h4 class="project-section-title">研究结果</h4>
+                            <p>多种工况下，改进重复控制将位置跟踪误差降低了 <span class="highlight">50%以上</span>，周期性推力波动抑制效果稳定。</p>
+                        </div>
+                        <div class="project-action">
+                            <a href="project1.html" class="btn btn-primary btn-sm">
+                                <span>查看详情</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 2 -->
+                <div class="project-card card animate-on-scroll animated">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">独立开发</span>
+                            <span class="project-date">2025.08 - 2025.10</span>
+                        </div>
+                        <h3 class="project-title">基于 FreeRTOS 的无刷电机 FOC 控制系统开发</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">项目职责</h4>
+                            <ul class="project-list">
+                                <li>基于 <span class="highlight">STM32F103C8T6</span> 与 <span class="highlight">FreeRTOS</span> 的云台无刷电机 <span class="highlight">FOC 矢量控制</span>系统开发</li>
+                                <li>以 <span class="highlight">MT6701</span> 磁编码器、<span class="highlight">INA199</span> 电流采样电路、<span class="highlight">DRV8313</span> 驱动芯片为主要硬件模块，基于 <span class="highlight">RTOS 多线程架构</span>划分编码器采集、电流采样、FOC 算法、PID 控制、故障保护等任务</li>
+                                <li>实现电机的 <span class="highlight">电流、速度、位置三闭环控制</span>与精准调速定位</li>
+                                <li>负责硬件电路原理图设计与调试，完成传感器模块与主控单元的电路焊接、信号校准与系统联调</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4 class="project-section-title">项目技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">FreeRTOS 多任务调度</span>
+                                <span class="tech-tag">FOC 磁场定向控制</span>
+                                <span class="tech-tag">SVPWM 调制</span>
+                                <span class="tech-tag">Clarke/Park 坐标变换</span>
+                                <span class="tech-tag">三闭环 PID 控制</span>
+                                <span class="tech-tag">STM32 外设驱动</span>
+                                <span class="tech-tag">电流采样与信号处理</span>
+                                <span class="tech-tag">电机参数整定</span>
+                                <span class="tech-tag">过流保护逻辑</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 3 -->
+                <div class="project-card card animate-on-scroll animated">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">队长</span>
+                            <span class="project-date">2025.02 - 2025.07</span>
+                        </div>
+                        <h3 class="project-title">极速光电（全国大学生智能汽车竞赛）</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">项目职责</h4>
+                            <ul class="project-list">
+                                <li>基于 <span class="highlight">NXP RT1021</span> 搭建 <span class="highlight">串级 PID 差速控制</span>架构，融合陀螺仪角速度与编码器里程计做弯道校正，规避高速过弯推头、甩尾问题</li>
+                                <li>多路线性 CCD 搭配 <span class="highlight">动态阈值二值化算法</span>提取赛道轮廓，结合 <span class="highlight">前瞻控制</span>提前规划车速与转向</li>
+                                <li>独立完成硬件电路及 PCB 布线，优化车体结构，整车稳定达成 <span class="highlight">2.4m/s 平均行驶速度</span></li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4 class="project-section-title">项目技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">差比和算法</span>
+                                <span class="tech-tag">串级动态 PID</span>
+                                <span class="tech-tag">处理器与开发板通讯</span>
+                                <span class="tech-tag">模型训练</span>
+                                <span class="tech-tag">UI 多级人机交互页面</span>
+                                <span class="tech-tag">速度决策</span>
+                            </div>
+                        </div>
+                        <div class="project-action">
+                            <a href="project3.html" class="btn btn-primary btn-sm">
+                                <span>查看详情</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 4：八轴无人机分电板设计 -->
+                <div class="project-card card additional-projects" id="additionalProjects">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">独立设计</span>
+                            <span class="project-date">2024.10 - 2025.02</span>
+                        </div>
+                        <h3 class="project-title">八轴无人机分电板设计</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">项目概述</h4>
+                            <ul class="project-list">
+                                <li>为八轴电调、英伟达 Jetson Orin NX 开发板供电，集成八个 PWM 信号接口</li>
+                                <li>满油门状态下八轴共需 <span class="highlight">800A</span> 大电流输出能力</li>
+                                <li>采用 <span class="highlight">TPS54360</span> 芯片实现 44V 转 12V 降压模块，为开发板提供稳定电源</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4 class="project-section-title">技术亮点</h4>
+                            <ul class="project-list">
+                                <li>V1.2 版本采用 <span class="highlight">4个电池并联</span> 方案，有效缓解大电流带来的线粗和插头问题</li>
+                                <li>V1.3 版本采用 <span class="highlight">PCB开窗铜排</span> 替代加锡，大幅提升载流能力</li>
+                                <li>圆形 Layout 设计，最大化板子面积，优化大电流走线</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4 class="project-section-title">项目技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">DC-DC 电源设计</span>
+                                <span class="tech-tag">大电流 PCB 设计</span>
+                                <span class="tech-tag">TPS54360 应用</span>
+                                <span class="tech-tag">铜排载流优化</span>
+                                <span class="tech-tag">电源完整性分析</span>
+                            </div>
+                        </div>
+                        <div class="project-action">
+                            <a href="https://blog.csdn.net/2201_75619391/article/details/145884030?spm=1001.2014.3001.5502" target="_blank" class="btn btn-primary btn-sm">
+                                <span>查看详情</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 5：51-32 双芯集成开发板 -->
+                <div class="project-card card additional-projects">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">组长</span>
+                            <span class="project-date">2025.09 - 2025.10</span>
+                        </div>
+                        <h3 class="project-title">51-32 双芯集成开发板</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">项目职责</h4>
+                            <ul class="project-list">
+                                <li>主导设计双芯片集成方案，将 <span class="highlight">51 单片机</span> 与 <span class="highlight">STM32 单片机</span> 集成到同一块电路板上，实现外设资源共享</li>
+                                <li>设计紧凑锁紧座机制，支持两种单片机的快速切换与热插拔，提升开发灵活性</li>
+                                <li>独立完成 <span class="highlight">原理图设计</span> 与 <span class="highlight">PCB 布线</span>，优化板级布局</li>
+                                <li>负责<span class="highlight">软件模块测试</span>与<span class="highlight">信号完整性验证</span>，确保各通讯接口稳定可靠</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4 class="project-section-title">核心技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">电压电平兼容</span>
+                                <span class="tech-tag">UART 通讯协议</span>
+                                <span class="tech-tag">I2C 通讯协议</span>
+                                <span class="tech-tag">SPI 通讯协议</span>
+                                <span class="tech-tag">信号完整性分析</span>
+                            </div>
+                        </div>
+                        <div class="project-action">
+                            <a href="project5.html" class="btn btn-primary btn-sm">
+                                <span>查看详情</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 6：摩托车平衡控制与路径识别 -->
+                <div class="project-card card additional-projects">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-role">队长</span>
+                            <span class="project-date">2023.11 - 2024.05</span>
+                        </div>
+                        <h3 class="project-title">摩托车平衡控制与路径识别</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <h4 class="project-section-title">项目概述</h4>
+                            <ul class="project-list">
+                                <li>采用<span class="highlight">无动量轮</span>方案，通过<span class="highlight">后方大轮上横向嵌套的八组小轮</span>实现动态平衡</li>
+                                <li>基于 <span class="highlight">TC264DA (双核) 处理器</span>，集成摄像头、陀螺仪、编码器实现平衡控制与路径识别</li>
+                                <li>对 <span class="highlight">TLD7002 芯片</span> 进行控制，实现随车身姿态变化的灯光秀效果</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4 class="project-section-title">核心技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">双核分配机制</span>
+                                <span class="tech-tag">视觉路径识别</span>
+                                <span class="tech-tag">陀螺仪姿态检测</span>
+                                <span class="tech-tag">双电机矢量控制</span>
+                                <span class="tech-tag">齿轮啮合结构</span>
+                            </div>
+                        </div>
+                        <div class="project-action">
+                            <a href="project6.html" class="btn btn-primary btn-sm">
+                                <span>查看详情</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 展示更多按钮 -->
+            <div class="text-center mt-8">
+                <button class="btn btn-primary" id="showMoreBtn">
+                    <span>展示更多项目</span>
+                    <svg id="moreArrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉奖励 -->
+    <section class="section section-alt" id="honors">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Honors</span>
+                <h2 class="section-title">荣誉奖励</h2>
+            </div>
+            <div class="honors-grid">
+                <div class="honor-card card animate-on-scroll">
+                    <div class="honor-level">
+                        <span class="honor-badge honor-national">国家级</span>
+                    </div>
+                    <h3 class="honor-title">国家励志奖学金</h3>
+                    <p class="honor-date">2024.12 & 2025.12</p>
+                </div>
+                <div class="honor-card card animate-on-scroll">
+                    <div class="honor-level">
+                        <span class="honor-badge honor-provincial">省级</span>
+                    </div>
+                    <h3 class="honor-title">全国大学生智能汽车竞赛省级二等奖</h3>
+                    <p class="honor-date">2025.07</p>
+                </div>
+                <div class="honor-card card animate-on-scroll">
+                    <div class="honor-level">
+                        <span class="honor-badge honor-provincial">省级</span>
+                    </div>
+                    <h3 class="honor-title">蓝桥杯 EDA 组省级三等奖</h3>
+                    <p class="honor-date">2025.07</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">专业技能</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card card animate-on-scroll">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    </div>
+                    <h3 class="skill-title">电机控制算法</h3>
+                    <p class="skill-desc">精通 <span class="highlight"></span>PMSM/BLDC 有感 FOC 矢量控制</span>，熟练实现坐标变换、<span class="highlight">SVPWM 调制</span>、<span class="highlight">三闭环 PID 整定</span>与重复控制优化</p>
+                </div>
+                <div class="skill-card card animate-on-scroll">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg>
+                    </div>
+                    <h3 class="skill-title">嵌入式平台开发</h3>
+                    <p class="skill-desc">熟悉 <span class="highlight">STM32F1/F4</span>、<span class="highlight">RT1021</span> 等平台开发，掌握 <span class="highlight">FreeRTOS 多任务调度</span>，电机控制外设驱动与嵌入式开发</p>
+                </div>
+                <div class="skill-card card animate-on-scroll">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <h3 class="skill-title">建模仿真分析</h3>
+                    <p class="skill-desc">熟练 <span class="highlight">Matlab/Simulink</span>、<span class="highlight">PLECS</span> 电机建模仿真，可独立完成控制算法离线验证与性能定量分析</p>
+                </div>
+                <div class="skill-card card animate-on-scroll">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+                    </div>
+                    <h3 class="skill-title">硬件电路设计</h3>
+                    <p class="skill-desc">掌握 <span class="highlight">AD 原理图</span>与 <span class="highlight">PCB 设计</span>，熟悉磁编码器、电流采样电路调试，精通 <span class="highlight">UART/SPI/CAN</span> 等通信协议</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 证书荣誉 -->
+    <section class="section section-alt" id="certificates">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Certificates</span>
+                <h2 class="section-title">证书荣誉</h2>
+            </div>
+            <div class="certificates-grid">
+                <!-- 蓝桥杯证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/EDA.jpg" alt="蓝桥杯大赛获奖证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">蓝桥杯大赛获奖证书</h3>
+                        <p class="certificate-desc">第十六届蓝桥杯全国软件和信息技术专业人才大赛广东赛区 EDA设计与开发大学组三等奖</p>
+                        <span class="certificate-date">2025年5月</span>
+                    </div>
+                </div>
+
+                <!-- 国家励志奖学金证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/GUOLI.jpg" alt="国家励志奖学金荣誉证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">国家励志奖学金荣誉证书</h3>
+                        <p class="certificate-desc">2023-2024学年度国家励志奖学金</p>
+                        <span class="certificate-date">2024年12月</span>
+                    </div>
+                </div>
+
+                <!-- 优秀学生干部证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/GONGYI.jpg" alt="优秀公益之星荣誉证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">优秀公益之星荣誉证书</h3>
+                        <p class="certificate-desc">2023-2024学年度"优秀公益之星"(三等奖)奖学金</p>
+                        <span class="certificate-date">2025年1月</span>
+                    </div>
+                </div>
+
+                <!-- 智能汽车竞赛证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/smart_car.png" alt="全国大学生智能汽车竞赛获奖证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">全国大学生智能汽车竞赛获奖证书</h3>
+                        <p class="certificate-desc">第二十届全国大学生智能汽车竞赛华南赛区极速光电(NXP)组二等奖</p>
+                        <span class="certificate-date">2025年</span>
+                    </div>
+                </div>
+
+                <!-- 雅思证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/ielts.jpg" alt="雅思成绩证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">雅思成绩证书</h3>
+                        <p class="certificate-desc">雅思考试总分6.0分</p>
+                        <span class="certificate-date">2024年</span>
+                    </div>
+                </div>
+
+                <!-- 荣誉证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/yougan.jpg" alt="荣誉证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">荣誉证书</h3>
+                        <p class="certificate-desc">校级优秀学生干部</p>
+                        <span class="certificate-date">2024年</span>
+                    </div>
+                </div>
+
+                <!-- 英语六级证书 -->
+                <div class="certificate-card card animate-on-scroll">
+                    <div class="certificate-image">
+                        <img src="assets/CET6_01.png" alt="英语六级证书">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">大学英语六级证书</h3>
+                        <p class="certificate-desc">英语六级考试成绩</p>
+                        <span class="certificate-date">2024年</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="证书预览">
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">梁永康</span>
+                    <p class="footer-tagline">电机控制算法工程师</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/kk-kk-99" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                    <a href="https://blog.csdn.net/2201_75619391?type=blog" target="_blank" rel="noopener noreferrer" class="footer-link">CSDN 博客</a>
+                    <span class="footer-link tooltip" data-tooltip="15902015669@163.com">15902015669@163.com</span>
+                    <span class="footer-link tooltip" data-tooltip="15902015669">15902015669</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 梁永康. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

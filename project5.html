@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51-32 双芯集成开发板 - 项目详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Hi, I'm KK</span>
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- 项目标题 -->
+            <div class="project-detail-header">
+                <div class="project-meta">
+                    <span class="project-role">硬件设计</span>
+                    <span class="project-date">2024.08 - 2024.12</span>
+                </div>
+                <h1 class="project-detail-title">51-32 双芯集成开发板</h1>
+                <p class="project-detail-subtitle">基于STC89C52与STM32F103的双核心开发板设计</p>
+            </div>
+
+            <!-- 项目介绍 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目介绍</h2>
+                <p class="project-description">
+                    本项目设计了一款基于STC89C52和STM32F103双核心的集成开发板，旨在提供一个兼具51单片机入门学习和STM32高级开发能力的多功能平台。开发板集成了多种外设接口，支持Arduino兼容扩展，便于快速原型开发和教学实验。
+                </p>
+            </div>
+
+            <!-- 项目职责 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目职责</h2>
+                <ul class="project-list">
+                    <li>负责 <span class="highlight">硬件架构设计</span>，包括双MCU核心布局、电源管理系统、外设接口规划</li>
+                    <li>完成 <span class="highlight">PCB Layout设计</span>，优化布线策略，确保信号完整性</li>
+                    <li>设计 <span class="highlight">硬件测试方案</span>，包括功能测试、稳定性测试、兼容性测试</li>
+                    <li>编写 <span class="highlight">硬件驱动程序</span>，实现双MCU间通信和外设控制</li>
+                </ul>
+            </div>
+
+            <!-- 核心技术 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">核心技术</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">双MCU架构</span>
+                    <span class="tech-tag">PCB Layout</span>
+                    <span class="tech-tag">电源管理</span>
+                    <span class="tech-tag">信号完整性</span>
+                    <span class="tech-tag">Arduino兼容</span>
+                    <span class="tech-tag">外设驱动</span>
+                </div>
+            </div>
+
+            <!-- 项目成果展示 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目成果展示</h2>
+                <p class="result-description">以下是开发板的实物展示：</p>
+                
+                <div class="project-gallery">
+                    <!-- 开发板展示 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">开发板实物</h3>
+                        <div class="gallery-grid gallery-grid-single">
+                            <div class="gallery-item">
+                                <img src="assets/project5/集成板.jpg" alt="51-32双芯集成开发板" class="gallery-image">
+                                <p class="gallery-caption">51-32 双芯集成开发板实物展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 返回按钮 -->
+            <div class="text-center mt-8">
+                <a href="index.html" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="图片预览">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>
