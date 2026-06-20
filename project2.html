@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于 FreeRTOS 的无刷电机 FOC 控制系统开发 - 项目详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">梁永康</span>
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- 项目标题 -->
+            <div class="project-detail-header">
+                <div class="project-meta">
+                    <span class="project-role">独立开发</span>
+                    <span class="project-date">2025.08 - 2025.10</span>
+                </div>
+                <h1 class="project-detail-title">基于 FreeRTOS 的无刷电机 FOC 控制系统开发</h1>
+                <p class="project-detail-subtitle">基于STM32F103C8T6与FreeRTOS的云台无刷电机FOC矢量控制系统</p>
+            </div>
+
+            <!-- 项目介绍 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目介绍</h2>
+                <p class="project-description">
+                    本项目是一个基于 FreeRTOS 的 STM32 电机控制系统，核心功能包括任务调度、实时控制和仿真支持。
+                    系统采用 <span class="highlight">STM32F103C8T6</span> 作为主控芯片，实现云台无刷电机的 <span class="highlight">FOC 矢量控制</span>，
+                    具有电流、速度、位置三闭环控制能力，可实现精准调速定位。
+                </p>
+                <div class="project-link">
+                    <a href="https://github.com/kk-kk-99/rtos_stm32_foc" target="_blank" class="btn btn-outline btn-sm">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        查看源代码
+                    </a>
+                </div>
+            </div>
+
+            <!-- 硬件设计 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">硬件设计</h2>
+                <ul class="project-list">
+                    <li>主控芯片：<span class="highlight">STM32F103C8T6</span>，72MHz 主频，丰富的外设资源</li>
+                    <li>磁编码器：<span class="highlight">MT6701</span>，21位高精度绝对值编码器，支持ABI/PWM/SSI接口</li>
+                    <li>电流采样：<span class="highlight">INA199</span> 电流采样电路，高精度电流检测</li>
+                    <li>电机驱动：<span class="highlight">DRV8313</span> 三相无刷电机驱动芯片，集成三相桥驱动</li>
+                    <li>负责硬件电路原理图设计与调试，完成传感器模块与主控单元的电路焊接、信号校准与系统联调</li>
+                </ul>
+            </div>
+
+            <!-- 软件架构 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">软件架构</h2>
+                <ul class="project-list">
+                    <li>基于 <span class="highlight">FreeRTOS</span> 实时操作系统搭建多任务框架，实现任务调度与实时响应</li>
+                    <li>任务划分：
+                        <ul class="project-list" style="margin-top: 8px;">
+                            <li>编码器采集任务：实时读取磁编码器位置数据</li>
+                            <li>电流采样任务：通过ADC采集三相电流</li>
+                            <li>FOC算法任务：实现磁场定向控制核心算法</li>
+                            <li>PID控制任务：电流环、速度环、位置环控制</li>
+                            <li>故障保护任务：过流、过压、过温保护逻辑</li>
+                        </ul>
+                    </li>
+                    <li>通过队列、信号量同步多任务数据，确保系统实时性与稳定性</li>
+                </ul>
+            </div>
+
+            <!-- FOC算法 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">FOC 控制算法</h2>
+                <ul class="project-list">
+                    <li><span class="highlight">Clarke 变换</span>：将三相静止坐标系 (a, b, c) 转换为两相静止坐标系 (α, β)</li>
+                    <li><span class="highlight">Park 变换</span>：将两相静止坐标系 (α, β) 转换为两相旋转坐标系 (d, q)</li>
+                    <li><span class="highlight">SVPWM 调制</span>：空间矢量脉宽调制，实现电机磁场矢量控制</li>
+                    <li><span class="highlight">三闭环 PID 控制</span>：
+                        <ul class="project-list" style="margin-top: 8px;">
+                            <li>电流环：最内环，控制电机相电流，响应速度最快</li>
+                            <li>速度环：中间环，控制电机转速</li>
+                            <li>位置环：最外环，控制电机角度位置</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 项目技术 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目技术</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">FreeRTOS 多任务调度</span>
+                    <span class="tech-tag">FOC 磁场定向控制</span>
+                    <span class="tech-tag">SVPWM 调制</span>
+                    <span class="tech-tag">Clarke/Park 坐标变换</span>
+                    <span class="tech-tag">三闭环 PID 控制</span>
+                    <span class="tech-tag">STM32 外设驱动</span>
+                    <span class="tech-tag">电流采样与信号处理</span>
+                    <span class="tech-tag">电机参数整定</span>
+                    <span class="tech-tag">过流保护逻辑</span>
+                </div>
+            </div>
+
+            <!-- 项目成果展示 -->
+            <div class="project-detail-card card">
+                <h2 class="section-title">项目成果展示</h2>
+                <p class="result-description">以下是基于 FreeRTOS 的无刷电机 FOC 控制系统的硬件电路设计：</p>
+                
+                <div class="project-gallery">
+                    <!-- 硬件电路设计 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">硬件电路设计</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="assets/project2/DRV8313驱动电路.png" alt="DRV8313驱动电路" class="gallery-image" onclick="openImageModal(this.src)">
+                                <p class="gallery-caption">DRV8313 三相电机驱动电路</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project2/电流采样电路.png" alt="电流采样电路" class="gallery-image" onclick="openImageModal(this.src)">
+                                <p class="gallery-caption">INA199 电流采样电路</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/project2/磁编码器电路.png" alt="磁编码器电路" class="gallery-image" onclick="openImageModal(this.src)">
+                                <p class="gallery-caption">MT6701 磁编码器接口电路</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 波形展示 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">波形展示</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item placeholder">
+                                <div class="placeholder-content">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21 15 16 10 5 21"/>
+                                    </svg>
+                                    <p>SVPWM波形</p>
+                                </div>
+                                <p class="gallery-caption">SVPWM调制波形（待补充）</p>
+                            </div>
+                            <div class="gallery-item placeholder">
+                                <div class="placeholder-content">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21 15 16 10 5 21"/>
+                                    </svg>
+                                    <p>电流环响应</p>
+                                </div>
+                                <p class="gallery-caption">电流环响应曲线（待补充）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 运行演示 -->
+                    <div class="gallery-group">
+                        <h3 class="gallery-group-title">运行演示</h3>
+                        <div class="gallery-grid gallery-grid-single">
+                            <div class="gallery-item placeholder">
+                                <div class="placeholder-content">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <polygon points="5 3 19 12 5 21 5 3"/>
+                                    </svg>
+                                    <p>电机运行视频</p>
+                                </div>
+                                <p class="gallery-caption">电机运行演示视频（待补充）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 返回按钮 -->
+            <div class="text-center mt-8">
+                <a href="index.html" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回主页
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="图片预览">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>
