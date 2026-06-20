@@ -1,15 +1,5 @@
 /* ========== 项目详情页面样式 ========== */
 
-/* 懒加载图片样式 */
-img.lazy {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-img.lazy.loaded {
-    opacity: 1;
-}
-
 .project-detail-section {
     padding: 120px 0 80px;
     min-height: 100vh;
