@@ -18,13 +18,7 @@
     if (networkModal && networkModalBtn) {
         networkModalBtn.addEventListener('click', function() {
             networkModal.classList.add('hidden');
-            localStorage.setItem('hideNetworkModal', 'true');
         });
-        
-        // 检查是否已经关闭过弹窗
-        if (localStorage.getItem('hideNetworkModal') === 'true') {
-            networkModal.classList.add('hidden');
-        }
     }
 
     // 图片懒加载
