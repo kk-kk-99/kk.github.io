@@ -663,6 +663,23 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
 
+    <!-- 网络提示弹窗 -->
+    <div class="network-modal" id="networkModal">
+        <div class="network-modal-content">
+            <div class="network-modal-icon">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22a10 10 0 0 0 10-10c0-4.4-2.8-8.1-6.8-9.5a1 1 0 0 0-.5.03A10 10 0 0 0 2 12c0 5.5 4.5 10 10 10z"/>
+                    <path d="M12 18.5a1 1 0 0 0 1-1v-5a1 1 0 0 0-2 0v5a1 1 0 0 0 1 1z"/>
+                    <path d="M8.5 14.5a1 1 0 0 0 1-1v-1a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1z"/>
+                    <path d="M15.5 14.5a1 1 0 0 0 1-1v-1a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1z"/>
+                </svg>
+            </div>
+            <h3 class="network-modal-title">访问提示</h3>
+            <p class="network-modal-text">本网站托管在 GitHub Pages，国内访问可能较慢。建议使用加速工具以获得更好的浏览体验。</p>
+            <button class="network-modal-btn" id="networkModalBtn">我知道了</button>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

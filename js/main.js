@@ -10,6 +10,22 @@
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     const showMoreBtn = document.getElementById('showMoreBtn');
     const additionalProjects = document.querySelectorAll('.additional-projects');
+    
+    // 网络提示弹窗
+    const networkModal = document.getElementById('networkModal');
+    const networkModalBtn = document.getElementById('networkModalBtn');
+    
+    if (networkModal && networkModalBtn) {
+        networkModalBtn.addEventListener('click', function() {
+            networkModal.classList.add('hidden');
+            localStorage.setItem('hideNetworkModal', 'true');
+        });
+        
+        // 检查是否已经关闭过弹窗
+        if (localStorage.getItem('hideNetworkModal') === 'true') {
+            networkModal.classList.add('hidden');
+        }
+    }
 
     // 图片懒加载
     const lazyImages = document.querySelectorAll('img.lazy');
